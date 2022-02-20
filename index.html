@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1E1E" media="(prefers-color-scheme: dark)">
+  <title>Advatages-gooey</title>
+  <link rel="stylesheet" href="./style.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="advatages-gooey">
+    <div class="container">
+      <div class="advatages-gooey__wrap">
+        <div class="advatages-gooey__gooey gooey">
+          <div class="gooey__circle-block circle-block">
+            <div class="circle-block__item item active" id="item__img--1">
+              <span class="item__circle"></span>
+            </div>
+            <div class="circle-block__item item" id="item__img--2">
+              <span class="item__circle"></span>
+            </div>
+            <div class="circle-block__item item" id="item__img--3">
+              <span class="item__circle"></span>
+            </div>
+            <div class="circle-block__item item" id="item__img--4">
+              <span class="item__circle"></span>
+            </div>
+            <div class="circle-block__item item" id="item__img--5">
+              <span class="item__circle"></span>
+            </div>
+            <div class="circle-block__item item" id="item__img--6">
+              <span class="item__circle"></span>
+            </div>
+            <div class="circle-block__item item" id="item__img--7">
+              <span class="item__circle"></span>
+            </div>
+            <div class="circle-block__item item" id="item__img--8">
+              <span class="item__circle"></span>
+            </div>
+          </div>
+          <div class="gooey__big-circle">
+          </div>
+        </div>
+        <div class="advatages-gooey__pictures pictures">
+          <div class="pictures__circle-block circle-block">
+            <div class="circle-block__item item active" data-id="item__img--1">
+              <span class="item__img" style="background:url(./images/mr-1.webp) center/contain no-repeat"></span>
+            </div>
+            <div class="circle-block__item item" data-id="item__img--2">
+              <span class="item__img" style="background:url(./images/mr-2.webp) center / contain no-repeat"></span>
+            </div>
+            <div class="circle-block__item item" data-id="item__img--3">
+              <span class="item__img" style="background:url(./images/mr-3.webp) center/contain no-repeat"></span>
+            </div>
+            <div class="circle-block__item item" data-id="item__img--4">
+              <span class="item__img" style="background:url(./images/mr-4.webp) center/contain no-repeat"></span>
+            </div>
+            <div class="circle-block__item item" data-id="item__img--5">
+              <span class="item__img" style="background:url(./images/mr-5.webp) center/contain no-repeat"></span>
+            </div>
+            <div class="circle-block__item item" data-id="item__img--6">
+              <span class="item__img" style="background:url(./images/mr-6.webp) center/contain no-repeat"></span>
+            </div>
+            <div class="circle-block__item item" data-id="item__img--7">
+              <span class="item__img" style="background:url(./images/mr-7.webp) center/contain no-repeat"></span>
+            </div>
+            <div class="circle-block__item item" data-id="item__img--8">
+              <span class="item__img" style="background:url(./images/mr-8.webp) center / contain no-repeat"></span>
+            </div>
+          </div>
+          <div class="pictures__big-circle big-circle">
+            <div class="big-circle__item item active" name="item__img--1">
+              <span class="item__img" style="background:url(./images/mr-1.webp) center/contain no-repeat"></span>
+              <span class="item__text">1</span>
+            </div>
+            <div class="big-circle__item item" name="item__img--2">
+              <span class="item__img" style="background:url(./images/mr-2.webp) center / contain no-repeat"></span>
+              <span class="item__text">2</span>
+            </div>
+            <div class="big-circle__item item" name="item__img--3">
+              <span class="item__img" style="background:url(./images/mr-3.webp) center/contain no-repeat"></span>
+              <span class="item__text">3</span>
+            </div>
+            <div class="big-circle__item item" name="item__img--4">
+              <span class="item__img" style="background:url(./images/mr-4.webp) center/contain no-repeat"></span>
+              <span class="item__text">4</span>
+            </div>
+            <div class="big-circle__item item" name="item__img--5">
+              <span class="item__img" style="background:url(./images/mr-5.webp) center/contain no-repeat"></span>
+              <span class="item__text">5</span>
+            </div>
+            <div class="big-circle__item item" name="item__img--6">
+              <span class="item__img" style="background:url(./images/mr-6.webp) center/contain no-repeat"></span>
+              <span class="item__text">6</span>
+            </div>
+            <div class="big-circle__item item" name="item__img--7">
+              <span class="item__img" style="background:url(./images/mr-7.webp) center/contain no-repeat"></span>
+              <span class="item__text">7</span>
+            </div>
+            <div class="big-circle__item item" name="item__img--8">
+              <span class="item__img" style="background:url(./images/mr-8.webp) center / contain no-repeat"></span>
+              <span class="item__text">8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+        var eventSuffix = '.inline';
+        var timerBrief, timerArrow;
+        $('.pictures .circle-block__item').on('mouseenter', function (e) {
+          var id = $(this).attr('data-id');
+          var $item = $(this);
+          var $background = $(document.getElementById(id));
+          var $background2 = $(document.getElementsByName(id));
+          $('.pictures .circle-block__item').not($item.addClass('active')).removeClass('active');
+          $('.gooey .circle-block__item').not($background.addClass('active')).removeClass('active');
+          $('.big-circle__item').not($background2.addClass('active')).removeClass('active');
+        });
+
+
+    </script>
+    <svg style="display:none;" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1000 1000"
+      enable-background="new 0 0 1000 1000" xml:space="preserve">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6"></feGaussianBlur>
+
+          <feColorMatrix in="blur" mode="matrix" values=" 1 0 0 0 0
+                                                                0 1 0 0 0
+                                                                0 0 1 0 0
+                                                                0 0 0 20 -10" result="goo"></feColorMatrix>
+        </filter>
+      </defs>
+    </svg>
+  </section>
+  <div class="message">
+    <span>This page does not display correctly on mobile devices, open it from your desktop.</span>
+  </div>
+</body>
+
+</html>
